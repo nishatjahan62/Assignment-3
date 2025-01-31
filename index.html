@@ -1,29 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment 03</title>
+    <!-- tailwindcss -->
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <!-- font from -->
+    <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Sora:wght@100..800&display=swap"
+        rel="stylesheet">
+    <!-- icons -->
+    <script src="https://kit.fontawesome.com/0182341c72.js" crossorigin="anonymous"></script>
 
-   
     <style type="text/tailwindcss">
         @theme {
             /* fonts*/
           --font-adlam:ADLaM Display, serif;
           --font-sora: Sora, serif;
+          /* color */
+          --color-primary: #111111;
+          --color-secondary:#000000;
+          --color-card:#F9DF8A
+          
+        }
+        /* btn */
+        .btn-primary{
+            @apply bg-[#FFDC26] py-2 px-7 my-3 rounded-lg
+        }
+        .hide{
+            @apply hidden md:flex
         }
       </style>
 </head>
+
 <body>
     <header>
-        <nav>
+        <nav class=" font-sora bg-[#FFF9F4]  flex justify-between px-4 items-center sm:px-20 ">
+           <div class="flex items-center">
+            <img class="" src="./c1-assets/logo-header.png" alt="a logo of pet shop">
+           <h2 class="hide">Browse<span class="text-[#FFDC26]">4</span>Pets</h2> </div>
+           <ul class="flex gap-4 items-center text-primary hide">
+            <li> <a href="">Find a pet</a></li>
+            <li> <a href="">Breeds</a></li>
+            <li> <a href="">Contact us</a></li>
+           </ul>
+           
+          <div class="flex gap-4 hide items-center">
+            <i class="fa-regular fa-bell"></i>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <button class="border-2 border-[#FFDC26] py-2 px-7 my-3 rounded-lg hover:bg-[#FFDC26]">Login</button>
+            <button class="btn-primary">Register</button>
+        </div>
+        <div class="relative group md:hidden">
+       <div class="block md:hidden items-center"><i class="fa-solid fa-bars"></i></div> 
+       <ul class=" absolute mt-4 pl-4 right-0 w-40 shadow-md rounded-lg hidden  group-hover:block">
+        <li> <a href="">Find a pet</a></li>
+        <li> <a href="">Breeds</a></li>
+        <li> <a href="">Contact us</a></li>
+       </ul></div>
 
         </nav>
+        <hr class=" block md:hidden" >
+       
     </header>
     <main>
 
@@ -32,6 +73,7 @@
 
     </footer>
 
-    
+
 </body>
+
 </html>
