@@ -28,15 +28,16 @@
         }
         /* btn */
         .btn-primary{
-            @apply bg-[#FFDC26] py-2 px-7 my-3 rounded-lg
+            @apply bg-[#FFDC26] py-2 px-7 my-3 rounded-lg hover:bg-yellow-600 font-bold
         }
         .btn-secondary{
-            @apply bg-white py-2 px-7 my-3 rounded-lg
+            @apply bg-white py-2 px-7 my-3 rounded-lg hover:bg-[#FFDC26] font-bold
         }
         /* hides from sm screen */
         .hide{
             @apply hidden md:flex
         }
+        /* custom styles */
         .card{
             @apply text-center mx-0 bg-card h-[200px] sm:bg-card h-[220px] rounded-xl
         }
@@ -46,12 +47,25 @@
         .product-img{
            @apply bg-[#FFF9F4]  my-2  w-[75px] h-[60px] rounded-lg
         }
+        /* Animation */
+    @keyframes typing{
+        from {width: 0;}
+        to {width: 100%;}
+    }
+    .animate-typing{
+        animation: typing 1s steps(15) infinite alternate;
+        overflow: hidden;
+        display: inline-block;
+        white-space: nowrap;
+    }
     
       </style>
 </head>
 
 <body>
     <header>
+        <!-- Navbar -->
+
         <nav class=" font-sora bg-[#FFF9F4]  flex gap-10 justify-between items-center px-5 lg:px-20 ">
             <div class="flex items-center gap-3">
                 <img class="" src="./c1-assets/logo-header.png" alt="a logo of pet shop">
@@ -66,77 +80,79 @@
             <div class="flex gap-4 hide items-center">
                 <i class="fa-regular fa-bell"></i>
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <button class="border-2 border-[#FFDC26] py-2 px-7 my-3 rounded-lg hover:bg-[#FFDC26]">Login</button>
-                <button class="btn-primary">Register</button>
+                <button class="border-2 border-[#FFDC26] py-2 px-7 my-3 rounded-lg hover:bg-[#FFDC26] font-bold">Login</button>
+                <button class="btn-primary animate-pulse opacity-90">Register</button>
             </div>
 
             <div class="block md:hidden items-center"><i class="fa-solid fa-bars"></i></div>
         </nav>
         <hr class=" block md:hidden">
+        <!-- Banner Section -->
         <section class="mt-20 px-5 relative lg:px-20">
             <div class=" relative sm:top-10 sm:w-[550px]">
-                <h1 class="overflow-hidden whitespace-nowrap animate-typing font-adlam text-primary text-3xl sm:text-5xl pb-8">Pamper Your Pet, <br> Because They Deserve
-       `             <br> the Best
+                <h1 class="font-adlam text-primary text-3xl sm:text-5xl pb-8 "><span class="animate-typing ">Pamper Your Pet,</span> <br> Because They Deserve
+                   <br> the Best.
                 </h1>
-         `       <p class="font-sora text-secondary text-sm pb-4">Explore a world of delightful treats, playful toys, and
+                <p class="font-sora text-secondary text-sm pb-4">Explore a world of delightful treats, playful toys, and
                     must-have essentials, all handpicked for your furry companions. Shop now and bring joy to every
                     wagging tail!</p>
                 <button class="animate-bounce btn-primary font-sora font-bold">find a pet</button>
             </div>
             <div class=" -mt-25 md:-mt-40 lg:-mt-80">
-                <img class="w-full" src="./export-from-figma/header-cat.png" alt="a cat">
+                <img class="w-full" src="./export-from-figma/header-cat.png" alt="a big cat">
             </div>
         </section>
     </header>
     <main>
-
+<!-- Category Section -->
         <section class="relative top-8 sm:top-10">
             <h2 class=" px-5  font-adlam text-3xl mt-20 sm:px-20 sm:pb-7">Browse By Categories</h2>
             <div class=" mt-5 gap-4 px-5 grid grid-cols-2  md:grid-cols-3 md:gap-5 md:px-18 lg:grid-cols-6 lg:gap-6">
                 <div class="card">
                     <div class="bg-white mx-auto mt-10 rounded-full w-[70px] h-[70px]"><img class="mx-auto pt-2"
-                            src="./c1-assets/dog-cartoon.png" alt=""></div>
+                            src="./c1-assets/dog-cartoon.png" alt="a Dog-cartoon "></div>
                     <h4 class="font-adlam pt-6 pb-1">Dog</h4>
                     <p class="font-sora">3 items</p>
                 </div>
 
                 <div class="card">
                     <div class="bg-white mx-auto mt-10 rounded-full w-[70px] h-[70px]"><img class="mx-auto pt-2"
-                            src="./c1-assets/fish-cartoon.png" alt=""></div>
+                            src="./c1-assets/fish-cartoon.png" alt="a fish-cartoon "></div>
                     <h4 class="font-adlam pt-6 pb-1">Fish</h4>
                     <p>3 items</p class="font-sora">
                 </div>
 
                 <div class="card">
                     <div class="bg-white mx-auto mt-10 rounded-full w-[70px] h-[70px]"><img class="mx-auto pt-2"
-                            src="./c1-assets/cat-cartoon.png" alt=""></div>
+                            src="./c1-assets/cat-cartoon.png" alt="a cat-cartoon "></div>
                     <h4 class="font-adlam pt-6 pb-1">Cat</h4>
                     <p>3 items</p class="font-sora">
                 </div>
 
                 <div class="card">
                     <div class="bg-white mx-auto mt-10 rounded-full w-[70px] h-[70px]"><img class="mx-auto pt-2"
-                            src="./c1-assets/bird-cartoon.png" alt=""></div>
+                            src="./c1-assets/bird-cartoon.png" alt="a bird-cartoon "></div>
                     <h4 class="font-adlam pt-6 pb-1">Birds</h4>
                     <p class="font-sora"> 3 items</p>
                 </div>
 
                 <div class="card">
                     <div class="bg-white mx-auto mt-10 rounded-full w-[70px] h-[70px]"><img class="mx-auto pt-3.5"
-                            src="./c1-assets/mouse-cartoon.png" alt=""></div>
+                            src="./c1-assets/mouse-cartoon.png" alt="a mouse-cartoon "></div>
                     <h4 class="font-adlam pt-6 pb-1">Small pet</h4>
                     <p class="font-sora">3 items</p>
                 </div>
 
                 <div class="card">
                     <div class="bg-white mx-auto mt-10 rounded-full w-[70px] h-[70px]"><img class="mx-auto pt-2"
-                            src="./c1-assets/rabbit-cartoon.png" alt=""></div>
+                            src="./c1-assets/rabbit-cartoon.png" alt="a rabbit-cartoon"></div>
                     <h4 class="font-adlam pt-6 pb-1">Rabit </h4>
                     <p>2 items</p class="font-sora">
                 </div>
             </div>
 
         </section>
+<!-- Products Section -->
 
         <section class="relative sm:top-20  px-10 sm:px-20  mt-20  sm:h-[700px] sm:bg-[#FFF9F4] ">
             <h2 class="font-adlam text-3xl pb-7  sm:pt-30  ">Trending Pet Products</h2>
@@ -150,11 +166,11 @@
                         <button class=" btn-secondary font-sora text-primary">Shop Now</button>
                     </div>
                     <div class="relative w-[60%] left-35 -top-10 sm:left-40 -top-15"> <img class="w-[90%]"
-                            src="./c1-assets/cute-pet-mid.png" alt=""></div>
+                            src="./c1-assets/cute-pet-mid.png" alt="a dog with t-shirt"></div>
                 </div>
                 <div class=" h-[350px] grid grid-cols-2 gap-4 mx-0 sm:grid-cols-3 sm:gap-6 ">
                     <div class="products-container">
-                        <div class="product-img"><img class="mx-auto pt-2" src="./c1-assets/dog-cartoon.png" alt="">
+                        <div class="product-img"><img class="mx-auto pt-2" src="./c1-assets/dog-cartoon.png" alt="A big dog">
                         </div>
                         <div class="font-sora text-xs sm:pr-5 text-left">
                             <p><span class="text-yellow-500 test-xl">&#9733; </span>4.5</p>
@@ -163,7 +179,7 @@
                         </div>
                     </div>
                     <div class="products-container">
-                        <div class="product-img"><img class="mx-auto pt-2" src="./c1-assets/fish-cartoon.png" alt="">
+                        <div class="product-img"><img class="mx-auto pt-2" src="./c1-assets/fish-cartoon.png" alt="a fish-cartoon">
                         </div>
                         <div class="font-sora text-xs sm:pr-5 text-left">
                             <p><span class="text-yellow-500 test-xl">&#9733; </span>4.5</p>
@@ -172,17 +188,7 @@
                         </div>
                     </div>
                     <div class="products-container">
-                        <div class="product-img"><img class="mx-auto pt-2" src="./c1-assets/bird-cartoon.png" alt="">
-                        </div>
-                        <div class="font-sora text-xs sm:pr-5 text-left">
-                            <p><span class="text-yellow-500 test-xl">&#9733; </span>4.5</p>
-                            <h4 class="font-medium">Pet Bed</h4>
-                            <p>$39.99</p>
-                        </div>
-                    </div>
-                    <div class="products-container">
-                        <div class="product-img">
-                            <img class="mx-auto pt-2" src="./c1-assets/rabbit-cartoon.png" alt="">
+                        <div class="product-img"><img class="mx-auto pt-2" src="./c1-assets/bird-cartoon.png" alt="a bird-cartoon">
                         </div>
                         <div class="font-sora text-xs sm:pr-5 text-left">
                             <p><span class="text-yellow-500 test-xl">&#9733; </span>4.5</p>
@@ -192,7 +198,7 @@
                     </div>
                     <div class="products-container">
                         <div class="product-img">
-                            <img class="mx-auto pt-2" src="./c1-assets/mouse-cartoon.png" alt="">
+                            <img class="mx-auto pt-2" src="./c1-assets/rabbit-cartoon.png" alt="a rabbit-cartoon">
                         </div>
                         <div class="font-sora text-xs sm:pr-5 text-left">
                             <p><span class="text-yellow-500 test-xl">&#9733; </span>4.5</p>
@@ -201,7 +207,8 @@
                         </div>
                     </div>
                     <div class="products-container">
-                        <div class="product-img"> <img class="mx-auto pt-2" src="./c1-assets/fish-cartoon.png" alt="">
+                        <div class="product-img">
+                            <img class="mx-auto pt-2" src="./c1-assets/mouse-cartoon.png" alt="a mouse-cartoon ">
                         </div>
                         <div class="font-sora text-xs sm:pr-5 text-left">
                             <p><span class="text-yellow-500 test-xl">&#9733; </span>4.5</p>
@@ -210,7 +217,16 @@
                         </div>
                     </div>
                     <div class="products-container">
-                        <div class="product-img"><img class="mx-auto pt-2" src="./c1-assets/pet-couch.png" alt=""></div>
+                        <div class="product-img"> <img class="mx-auto pt-2" src="./c1-assets/fish-cartoon.png" alt="a fish-cartoon">
+                        </div>
+                        <div class="font-sora text-xs sm:pr-5 text-left">
+                            <p><span class="text-yellow-500 test-xl">&#9733; </span>4.5</p>
+                            <h4 class="font-medium">Pet Bed</h4>
+                            <p>$39.99</p>
+                        </div>
+                    </div>
+                    <div class="products-container">
+                        <div class="product-img"><img class="mx-auto pt-2" src="./c1-assets/pet-couch.png" alt="a pet pet-couch"></div>
                         <div class="font-sora text-xs sm:pr-5 text-left">
                             <p><span class="text-yellow-500 test-x">&#9733; </span>4.5</p>
                             <h4 class="font-medium">Pet Bed</h4>
@@ -220,7 +236,7 @@
                     <div class="hide">
                         <div class="products-container hide">
                             <div class="product-img"> <img class="mx-auto pt-2" src="./c1-assets/fish-cartoon.png"
-                                    alt="">
+                                    alt="a fish-cartoon">
                             </div>
                             <div class="font-sora text-xs sm:pr-5 text-left">
                                 <p><span class="text-yellow-500 test-xl">&#9733; </span>4.5</p>
@@ -230,7 +246,7 @@
                         </div>
                     </div>
                     <div class="products-container">
-                        <div class="product-img"><img class="mx-auto pt-2" src="./c1-assets/mouse-cartoon.png" alt="">
+                        <div class="product-img"><img class="mx-auto pt-2" src="./c1-assets/mouse-cartoon.png" alt="a mouse-cartoon ">
                         </div>
                         <div class="font-sora text-xs sm:pr-5 text-left">
                             <p><span class="text-yellow-500 test-xl">&#9733; </span>4.5</p>
@@ -240,6 +256,7 @@
                     </div>
                 </div>
         </section>
+<!-- Price Section -->
         <section class=" relative sm:top-26 px-10 sm:mx-20 sm:px-0 mt-20">
             <h2 class="font-adlam text-2xl sm:text-3xl sm:pb-7 ">Everyday low price</h2>
             <div class=" relative sm:bottom-10 sm:mt-5 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-8">
@@ -251,8 +268,8 @@
                         <p class="font-sora text-white pb-2 hide">(Easy Hair Removal)</p>
                         <p class="text-white sm:text-primary font-adlam text-2xl">$7.99</p>
                     </div>
-                    <div class="relative w-[60%] left-30 sm:w-[50%] bottom-10 sm:left-0 bottom-10 sm:bottom-0">
-                        <img class=" w-[90%]sm:w-full" src="./c1-assets/cute-dog-mid.png" alt="">
+                    <div class="relative w-[60%] sm:pt-6  left-30 sm:w-[50%] bottom-10 sm:left-0 bottom-10 sm:bottom-0">
+                        <img class=" w-[90%]sm:w-full" src="./c1-assets/cute-dog-mid.png" alt="a big dog">
                     </div>
                 </div>
 
@@ -263,7 +280,7 @@
                         <p class="font-adlam text-[#FFDC26] text-xl sm:text-2xl">$7.99</p>
                     </div>
                     <div class=" relative w-[60%] left-30  sm:w-[60%]  sm:left-35 bottom-18">
-                        <img class=" w-[90%]sm:w-full" src="./c1-assets/cute-pet-mid.png" alt="">
+                        <img class=" w-[90%]sm:w-full" src="./c1-assets/cute-pet-mid.png" alt="a dog with at-shirt">
                     </div>
                 </div>
             </div>
@@ -272,7 +289,7 @@
         <section >
             <div class=" top-25 rounded-2xl relative sm:top-40 mx-10 sm:mx-20 bg-linear-to-l from-[#B9D1FD] to-[#F0CDFB] flex flex-col sm:flex-row justify-around sm:gap-15 items-center">
             <div class="w-50% sm:w-[50%] py-10">
-                <img class=" w-[100%] sm:[90%]" src="images/appstore-bg.png" alt="">
+                <img class=" w-[100%] sm:[90%]" src="images/appstore-bg.png" alt="2 dogs 1 big and 1 small">
             </div>
             <div class="px-5 pb-7">
                 <h4 class=" font-sora text-primary pb-3 sm:pb-5">Get us on your phone</h4>
@@ -296,7 +313,8 @@
                     <h2 class="font-adlam text-primary text-xl sm:text-2xl pb-3">Get Awesome News!</h2>
                     <p class="font-sora text-primary text-sm sm:text-lg  pb-3">Exclusive training tips, ticks, product
                         deals and more.</p>
-                    <input class="bg-white py-3 pl-5 mb-3 sm:w-[350px] font-sora" type="text"
+                    <input class="bg-white py-3 pl-5 mb-3 sm:w-[350px] font-sora focus:border-black
+                    " type="text"
                         placeholder="Enter email..."> <br>
                     <button class="btn-primary font-sora">Subscribe</button>
 
